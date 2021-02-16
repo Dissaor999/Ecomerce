@@ -93,127 +93,21 @@ if($cliente->getAccessToken()){
 TOP
 ======================================-->
 
-<div class="container-fluid barraSuperior" id="top">
+<div class="container-fluid" id="top">
 	
 	<div class="container">
 		
 		<div class="row">
 	
 			<!--=====================================
-			SOCIAL
+			Encabezado
 			======================================-->
 
-			<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 social">
-				
-				<ul>	
-
-					<?php
-
-					$social = ControladorPlantilla::ctrEstiloPlantilla();
-
-					$jsonRedesSociales = json_decode($social["redesSociales"],true);		
-
-					foreach ($jsonRedesSociales as $key => $value) {
-
-						echo '<li>
-								<a href="'.$value["url"].'" target="_blank">
-									<i class="fa '.$value["red"].' redSocial '.$value["estilo"].'" aria-hidden="true"></i>
-								</a>
-							</li>';
-					}
-
-					?>
-			
-				</ul>
-
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 social">
+				<div class="text-center">
+					<img src="\frontend\vistas\img\NAV\top.png" class="rounded mx-auto d-block" alt="...">
+				</div>
 			</div>
-
-			<!--=====================================
-			REGISTRO
-			======================================-->
-
-			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 registro">
-				
-				<ul>
-
-				<?php
-
-				if(isset($_SESSION["validarSesion"])){
-
-					if($_SESSION["validarSesion"] == "ok"){
-
-						if($_SESSION["modo"] == "directo"){
-
-							if($_SESSION["foto"] != ""){
-
-								echo '<li>
-
-										<img class="img-circle" src="'.$url.$_SESSION["foto"].'" width="10%">
-
-									 </li>';
-
-							}else{
-
-								echo '<li>
-
-									<img class="img-circle" src="'.$servidor.'vistas/img/usuarios/default/anonymous.png" width="10%">
-
-								</li>';
-
-							}
-
-							echo '<li>|</li>
-							 <li><a href="'.$url.'perfil">Ver Perfil</a></li>
-							 <li>|</li>
-							 <li><a href="'.$url.'salir">Salir</a></li>';
-
-
-						}
-
-						if($_SESSION["modo"] == "facebook"){
-
-							echo '<li>
-
-									<img class="img-circle" src="'.$_SESSION["foto"].'" width="10%">
-
-								   </li>
-								   <li>|</li>
-						 		   <li><a href="'.$url.'perfil">Ver Perfil</a></li>
-						 		   <li>|</li>
-						 		   <li><a href="'.$url.'salir" class="salir">Salir</a></li>';
-
-						}
-
-						if($_SESSION["modo"] == "google"){
-
-							echo '<li>
-
-									<img class="img-circle" src="'.$_SESSION["foto"].'" width="10%">
-
-								   </li>
-								   <li>|</li>
-						 		   <li><a href="'.$url.'perfil">Ver Perfil</a></li>
-						 		   <li>|</li>
-						 		   <li><a href="'.$url.'salir">Salir</a></li>';
-
-						}
-
-					}
-
-				}else{
-
-					echo '<li><a href="#modalIngreso" data-toggle="modal">Ingresar</a></li>
-						  <li>|</li>
-						  <li><a href="#modalRegistro" data-toggle="modal">Crear una cuenta</a></li>';
-
-				}
-
-				?>
-	
-				</ul>
-
-			</div>	
-
 		</div>	
 
 	</div>
@@ -230,87 +124,87 @@ HEADER
 		
 		<div class="row" id="cabezote">
 
-			<!--=====================================
-			LOGOTIPO
-			======================================-->
-			
-			<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">
-				
-				<a href="<?php echo $url; ?>">
+			<nav class="navbar navbar-default navbar-fixed-top transparent" id="navsupra">
+				<div class="container">
+					<!--=====================================
+					LOGOTIPO
+					======================================-->
+					
+					<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">
 						
-					<img src="<?php echo $servidor.$social["logo"]; ?>" class="img-responsive">
-
-				</a>
-				
-			</div>
-
-			<!--=====================================
-			BLOQUE CATEGORÍAS Y BUSCADOR
-			======================================-->
-
-			<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-					
-				<!--=====================================
-				BOTÓN CATEGORÍAS
-				======================================-->
-
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 backColor" id="btnCategorias">
-					
-					<p>CATEGORÍAS
-					
-						<span class="pull-right">
-							<i class="fa fa-bars" aria-hidden="true"></i>
-						</span>
-					
-					</p>
-
-				</div>
-
-				<!--=====================================
-				BUSCADOR
-				======================================-->
-				
-				<div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-12" id="buscador">
-					
-					<input type="search" name="buscar" class="form-control" placeholder="Buscar...">	
-
-					<span class="input-group-btn">
-						
-						<a href="<?php echo $url; ?>buscador/1/recientes">
-
-							<button class="btn btn-default backColor" type="submit">
+						<a href="<?php echo $url; ?>">
 								
-								<i class="fa fa-search"></i>
-
-							</button>
+							<img src="\frontend\vistas\img\NAV\supra.png" class="img-responsive">
 
 						</a>
-
-					</span>
-
-				</div>
-			
-			</div>
-
-			<!--=====================================
-			CARRITO DE COMPRAS
-			======================================-->
-
-			<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="carrito">
-				
-				<a href="<?php echo $url;?>carrito-de-compras">
-
-					<button class="btn btn-default pull-left backColor"> 
 						
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					</div>
+
+					<!--=====================================
+					BLOQUE CATEGORÍAS Y BUSCADOR
+					======================================-->
+
+					<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+							
+						<!--=====================================
+						BOTÓN CATEGORÍAS
+						======================================-->
+
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 backColor" id="btnCategorias">
+							
+							
+
+						</div>
+
+						<!--=====================================
+						BUSCADOR
+						======================================-->
+						
+						<div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-12" id="buscador">
+							
+							<input type="search" name="buscar" class="form-control" placeholder="Buscar...">	
+
+							<span class="input-group-btn">
+								
+								<a href="<?php echo $url; ?>buscador/1/recientes">
+
+									<button class="btn btn-default backColor" type="submit">
+										
+										<i class="fa fa-search"></i>
+
+									</button>
+
+								</a>
+
+							</span>
+
+						</div>
 					
-					</button>
-				
-				</a>	
+					</div>
 
-				<p>TU CESTA <span class="cantidadCesta"></span> <br> USD $ <span class="sumaCesta"></span></p>	
+					<!--=====================================
+					CARRITO DE COMPRAS
+					======================================-->
 
-			</div>
+					<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="carrito">
+						
+						<a href="<?php echo $url;?>carrito-de-compras">
+
+							<button class="btn btn-default pull-left backColor"> 
+								
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+							
+							</button>
+						
+						</a>	
+
+						<p>TU CESTA <span class="cantidadCesta"></span> <br> USD $ <span class="sumaCesta"></span></p>	
+
+					</div>
+				</div>
+			</nav>
+
+			
 
 		</div>
 

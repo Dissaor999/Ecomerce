@@ -13,9 +13,16 @@ TOP
 	color:white;
 }
 
+#navsupra {
+	background-color:rgb(255, 255, 255); /*whichever you want*/
+    opacity: 0.7; 
+    filter:(opacity=50); 
+}
+
 .social ul li a i{
 	font-size:18px;
 	margin:0 1px;
+	background-color: rgb(255, 255, 255);
 }
 
 .registro ul{
