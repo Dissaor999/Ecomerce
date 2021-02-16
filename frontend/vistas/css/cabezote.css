@@ -14,9 +14,8 @@ TOP
 }
 
 #navsupra {
-	background-color:rgb(255, 255, 255); /*whichever you want*/
-    opacity: 0.7; 
-    filter:(opacity=50); 
+	background-color: transparent; /*whichever you want*/
+    border-color: transparent;
 }
 
 .social ul li a i{

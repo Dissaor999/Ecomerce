@@ -125,7 +125,7 @@ HEADER
 		<div class="row" id="cabezote">
 
 			<nav class="navbar navbar-default navbar-fixed-top transparent" id="navsupra">
-				<div class="container">
+				
 					<!--=====================================
 					LOGOTIPO
 					======================================-->
@@ -147,14 +147,12 @@ HEADER
 					<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
 							
 						<!--=====================================
-						BOTÓN CATEGORÍAS
+						CATEGORÍAS
 						======================================-->
-
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 backColor" id="btnCategorias">
-							
-							
-
-						</div>
+						<a>Chaufage</a>
+						<a>Ventilation</a>
+						<a>Destockage</a>
+						<a>Accesories</a>						
 
 						<!--=====================================
 						BUSCADOR
@@ -201,7 +199,7 @@ HEADER
 						<p>TU CESTA <span class="cantidadCesta"></span> <br> USD $ <span class="sumaCesta"></span></p>	
 
 					</div>
-				</div>
+				
 			</nav>
 
 			

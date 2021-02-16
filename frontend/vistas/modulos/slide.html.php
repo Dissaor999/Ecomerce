@@ -16,11 +16,11 @@ SLIDESHOW
 		
 			<li>
 				
-				<img src="http://localhost/backend/vistas/img/slide/default/back_default.jpg">
+				<img src="\frontend\vistas\img\Slide\Slide 1.jpg">
 
 				<div class="slideOpciones slideOpcion1">
 					
-					<img class="imgProducto" src="http://localhost/backend/vistas/img/slide/slide1/calzado.png" style="top:15%; right:10%; width:45%">
+					<img class="imgProducto" src="\frontend\vistas\img\Slide\Slide 1.jpg" style="top:15%; right:10%; width:45%">
 
 					<div class="textosSlide" style="top:20%; left:10%; width:40%">
 						
